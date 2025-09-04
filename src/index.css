@@ -1,0 +1,143 @@
+:root {
+  --bg: #f7f7f8;
+  --card: #fff;
+  --muted: #6b7280;
+  --text: #0f172a;
+  --ring: #e5e7eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
+    "Helvetica Neue", Arial;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+h1 {
+  font-size: 40px;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px;
+}
+
+.searchbox {
+  position: relative;
+}
+.input {
+  width: 100%;
+  height: 56px;
+  padding: 0 48px 0 52px;
+  border-radius: 14px;
+  border: 1px solid var(--ring);
+  outline: none;
+  background: #fff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+  font-size: 16px;
+}
+.input:focus {
+  border-color: #c7d2fe;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+.searchicon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.6;
+}
+.clearbtn {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 40px;
+  min-width: 40px;
+  border: 0;
+  background: transparent;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.clearbtn:hover {
+  background: #f3f4f6;
+}
+
+.meta {
+  color: var(--muted);
+  margin: 10px 2px 20px;
+}
+.list {
+  display: grid;
+  gap: 16px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--ring);
+  border-radius: 18px;
+  padding: 18px 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+.title {
+  font-size: 22px;
+  line-height: 1.25;
+  margin: 0 0 8px;
+}
+.date {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.excerpt {
+  margin: 0;
+  color: #1f2937;
+}
+
+mark {
+  background: #fff176;
+}
+
+.empty {
+  padding: 28px;
+  border: 1px dashed var(--ring);
+  border-radius: 16px;
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (min-width: 960px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 28px;
+  }
+}
+.aside {
+  position: sticky;
+  top: 16px;
+}
+.about {
+  background: var(--card);
+  border: 1px solid var(--ring);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+.about h3 {
+  margin: 0 0 6px;
+}
+.about p {
+  margin: 0;
+  color: #374151;
+}
